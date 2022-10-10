@@ -1,0 +1,21 @@
+<div class="row" *ngIf="allEpisodes$ | async as allEpisodes">
+    <div class="col-6 mt-1"  *ngFor="let ep of allEpisodes">
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">
+                    {{ep.name}}
+                    <button type="button float-right" class="btn btn-outline-danger" (click)="onEpisodeSelect(ep)">Like</button>
+
+                </h5>
+                <p class="card-text">Air Date: {{ep.air_date}}</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Sed ex quis dicta ipsum sint quas neque perferendis nam assumenda 
+                    vitae repellat distinctio harum, asperiores excepturi magnam 
+                    quam earum ut! Quam!
+                </p>
+                <a href="#" class="card-link">View Characters</a>
+                <a href="#" class="card-link">View Episode</a>
+            </div>
+        </div>
+    </div>
+</div>
